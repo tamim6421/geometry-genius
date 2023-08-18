@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main class="my-10">
+        <!-- card container -->
+        <div class="flex flex-col md:flex-row">
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-3">
+                <!-- triangle  -->
+                <div class="card p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 * b * h </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="base" type="number" name="" id="triangleBase"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="height" type="number" name="" id="trangleheight">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="triangleArea">00</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="triangleArea()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!-- Rectangle  -->
+                <div class=" p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w * l </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="width" type="number" name="" id="recWidth"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="length" type="number" name="" id="recLength">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="rectangleArea">0</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="rectangleArea()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- Parallelogram  -->
+                <div class=" p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b * h </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="base" type="number" name="" id="peraBase"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="hight" type="number" name="" id="peraHight">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="peralleArea">0</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="peraArea()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Rhombus -->
+                  <div class=" p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 * d1 * d2 </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="base" type="number" name="" id="rhombusBase"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="hight" type="number" name="" id="rhombusHight">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="rhombusArea">0</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="rhombusBtn()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pentagon -->
+                  <div class=" p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 * p * b </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="p" type="number" name="" id="perimeter"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="b" type="number" name="" id="apothem">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="pentagonArea">0</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="pentagonBtn()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Ellipse -->
+                  <div class=" p-5 bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = π ab </p>
+                      <p>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="large" type="number" name="" id="ellipseRedius1"> <span>cm</span>
+                        <input class="bg-slate-100 w-24 p-1 border" placeholder="height" type="number" name="" id="ellipseRedius2">
+                        <span>cm</span>
+                      </p>
+                      <p>Area: <span id="ellipseArea">0</span>cm <sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="ellipseBtn()" class="btn btn-primary mt-2 w-full">calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="w-80 p-5">
+                <h2 class="text-2xl text-center">Area Calculation</h2>
+                <div id="addSection">
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // common function 
+        function convertInputValue(inputId){
+            const inputValue = document.getElementById(inputId).value 
+            const value = parseFloat(inputValue)
+            return value
+        }
+        function setInnerText(setId, area){
+            const element = document.getElementById(setId)
+            element.innerText = area
+        }
+
+        function createAreaCalculation(areaType, area){
+            const addSection = document.getElementById('addSection')
+            const p = document.createElement ('p')
+            p.classList.add('my-2')
+            const count = addSection.childElementCount
+            p.innerHTML=`${count+1}. ${areaType} ${area} cm<sup>2</sup> <button class= "btn btn-sm btn-success">Convert </button>
+            
+            `
+            addSection.appendChild(p)
+            console.log(addSection)
+        }
+
+        // triangleArea 
+        function triangleArea(){
+            const base = convertInputValue('triangleBase')
+            const height = convertInputValue('triangleBase')
+            if(isNaN(base) || isNaN(height)){
+                alert('input a valid number')
+                return;
+            }
+            const area = 0.5 * base * height
+            setInnerText('triangleArea', area)
+            createAreaCalculation( 'Triangle', area)
+        }
+        // rectangleArea
+        function rectangleArea(){
+            const width = convertInputValue('recWidth')
+            const length = convertInputValue('recLength')
+            if(isNaN(width) || isNaN(length)){
+                alert('input a valid number')
+                return;
+            }
+            const area = width * length
+            setInnerText('rectangleArea', area)
+            createAreaCalculation( 'Rectangle', area)
+        }
+
+        // Parallelogram
+       function peraArea(){
+        const peraBase = convertInputValue('peraBase')
+        const peraHeight = convertInputValue('peraHight')
+        if(isNaN(peraBase) || isNaN(peraHeight)){
+                alert('input a valid number')
+                return;
+            }
+        const area = peraBase * peraHeight
+        setInnerText('peralleArea', area)
+        createAreaCalculation( 'Parallelogram', area)
+       }
+    //    rhombusArea
+    function rhombusBtn(){       
+        const rhombusBase = convertInputValue('rhombusBase')
+        const rhombusHight = convertInputValue('rhombusHight')
+        if(isNaN(rhombusBase) || isNaN(rhombusHight)){
+                alert('input a valid number')
+                return;
+            }
+        const area = 0.5 * rhombusBase * rhombusHight
+        setInnerText('rhombusArea', area)   
+        createAreaCalculation( 'Rhombus', area) 
+    }
+    // pentagon 
+    function pentagonBtn(){
+        const perimeter = convertInputValue('perimeter')
+        const apothem = convertInputValue('apothem')
+        if(isNaN(perimeter) || isNaN(apothem)){
+                alert('input a valid number')
+                return;
+            }
+        const area = 0.5 * perimeter * apothem
+        setInnerText('pentagonArea', area)
+        createAreaCalculation( 'Pentagon', area) 
+
+    }
+
+    // ellipse 
+    function ellipseBtn(){
+        const ellipseRedius1 = convertInputValue('ellipseRedius1')
+        const ellipseRedius2 = convertInputValue('ellipseRedius2')
+        if(isNaN(ellipseRedius1) || isNaN(ellipseRedius2)){
+                alert('input a valid number')
+                return;
+            }
+        const area = 3.14 *ellipseRedius1*ellipseRedius2
+        setInnerText('ellipseArea', area)
+        createAreaCalculation( 'Ellipse', area) 
+    }
+
+    </script>
+</body>
+</html>
